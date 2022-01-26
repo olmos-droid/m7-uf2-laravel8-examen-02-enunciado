@@ -41,6 +41,7 @@ class ProductController extends Controller
     {
         $this->showBanner = false;
         $this->search($cat); 
+        $products=Product::all()->where('category',$cat);
         return $this->showProducts();
     }
 

@@ -17,7 +17,17 @@ docker run --rm \
 
 ## Alquiler de peliculas
 
-![Pagina Principal](https://github.com/dantriano/m7-laravel-exam-02/blob/main/public/img/screen01.png)
+![Pagina Principal](https://github.codocker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqsdocker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqsm/dantriano/m7-laravel-exam-02/blob/main/public/img/screen01.png)
 
 - Queremos crear un sistema de alquiler de peliculas
 - Las peliculas se pueden alquilar o comprar

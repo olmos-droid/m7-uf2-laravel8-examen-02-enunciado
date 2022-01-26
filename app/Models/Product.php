@@ -8,6 +8,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Product extends Model
 {
     use  HasFactory;
+    protected $fillable = [
+        'name',
+        'category',
+        'descripcion',
+        'rating',
+        'stock',
+        'price',
+        'image',
+        
+    ];
+
     
     public function scopeName($query, $input)
     {

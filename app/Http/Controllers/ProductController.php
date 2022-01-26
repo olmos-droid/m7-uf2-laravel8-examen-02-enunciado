@@ -40,6 +40,7 @@ class ProductController extends Controller
     public function category(Request $request, $cat)
     {
         $this->showBanner = false;
+        $this->search($cat); 
         return $this->showProducts();
     }
 
@@ -49,6 +50,7 @@ class ProductController extends Controller
     public function search(Request $request)
     {
 
+        dump($request);
         $query = Product::query();
         $this->showBanner = false;
 

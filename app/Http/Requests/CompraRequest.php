@@ -26,6 +26,12 @@ class CompraRequest extends FormRequest
     public function rules()
     {
         return [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'password_confirmation' => 'required',
+            'photo' => 'required',
+            
 
         ];
     }
@@ -33,12 +39,17 @@ class CompraRequest extends FormRequest
     public function messages()
     {
         return [
-           
+            'name.required' => 'Falta el campo :attribute".',
+            'email.required' => 'Falta el campo :attribute".',
+            'password.required' => 'Falta el campo :attribute".',
+            'password_confirmation.required' => 'Falta el campo :attribute".',
+            'photo.required' => 'Falta el campo :attribute".',
         ];
     }
     public function attributes()
     {
         return [
+          
         ];
     }
     /**

@@ -40,8 +40,8 @@ class ProductController extends Controller
     public function category(Request $request, $cat)
     {
         $this->showBanner = false;
-        $this->search($cat); 
-        $products=Product::all()->where('category',$cat);
+        $this->search($cat);
+        $this->products = Product::category($cat)->get();
         return $this->showProducts();
     }
 

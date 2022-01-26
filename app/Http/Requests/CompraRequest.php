@@ -27,30 +27,29 @@ class CompraRequest extends FormRequest
     {
         return [
             'name' => 'required',
+
+            'address' => 'required',
             'email' => 'required',
             'password' => 'required',
             'password_confirmation' => 'required',
-            'photo' => 'required',
-            
-
+            'photo' => 'required|image'
         ];
     }
-
-    public function messages()
+    public
+    function messages()
     {
         return [
-            'name.required' => 'Falta el campo :attribute".',
-            'email.required' => 'Falta el campo :attribute".',
-            'password.required' => 'Falta el campo :attribute".',
-            'password_confirmation.required' => 'Falta el campo :attribute".',
-            'photo.required' => 'Falta el campo :attribute".',
+            'name.required' => 'Falta el campo name',
+            'address.required' => 'Falta el campo direccion',
+            'email.required' => 'Falta el campo email',
+            'password.required' => 'Falta el campo password',
+            'password_confirmation.required' => 'Falta el campo confirmacion de password',
+            'photo.required' => 'Falta el campo  foto'
         ];
     }
     public function attributes()
     {
-        return [
-          
-        ];
+        return [];
     }
     /**
      *  AJAX Response 

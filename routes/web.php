@@ -33,5 +33,5 @@ Route::get('/compra/confirmar', [CompraController::class, 'confirmar']);
 Route::get('/compra/end', [CompraController::class, 'end']);
 Route::post('stock', [CompraController::class, 'checkStock']);
 
-Route::post('addToCart')->name('addToCart');
-Route::get('clearCart')->name('clearCart');
+Route::post('addToCart', [CompraController::class, 'addToCart'])->name('addToCart');
+Route::get('clearCart', [CompraController::class, 'clearCart'])->name('clearCart');
